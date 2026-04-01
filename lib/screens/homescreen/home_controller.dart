@@ -7,5 +7,8 @@ class HomeController extends GetxController {
   int b = 0;
 
   var count =  0.obs;
+  // var rx =  0.obs;
+  var rdStr = Rx<String>("");
+  
 
 }
