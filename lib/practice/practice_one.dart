@@ -39,7 +39,6 @@ class _PracticeOneState extends State<PracticeOne> {
       spacing: 10,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Color:", style: TextStyle(fontSize: 18)),
         Row(
           spacing: 10,
           children: [
