@@ -1,1 +1,15 @@
 OnReady and OnInit it a same.
+- State management
+    - ui
+    - logic
+- Getx, Provider , RiverPod, Bloc ...
+- GetX : State management , Navigation, DI , ...
+- SetState -> rebuild
+- Reactivr widget : GetX, Obx if we can use this must to have Reactive Variable
+- Reactive Variable is for updata data : obs Ex: int a = 10; RxInt , RxString, RxBool and obs is Reactive
+Ex: RxInt a = 10.obs;
+    var a = 20.40.obs;
+
+- if we can use getx we have 2 screen is ui and logic.
+
+
