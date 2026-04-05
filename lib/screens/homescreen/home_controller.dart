@@ -6,9 +6,22 @@ class HomeController extends GetxController {
   RxInt a = 0.obs;
   int b = 0;
 
-  var count =  0.obs;
+  var count = 0.obs;
   // var rx =  0.obs;
   var rdStr = Rx<String>("");
-  
 
+  // @override
+  // void onInit() {
+  //   // TODO: implement onInit
+  //   super.onInit();
+  //   // ever(count, (callback) {
+  //   //   debugPrint("Count us called : $callback");
+  //   // });
+  // }
+
+  // @override
+  // void onReady() {
+  //   // TODO: implement onReady
+  //   super.onReady();
+  // }
 }

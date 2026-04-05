@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_level_2/screens/homescreen/home_controller.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import 'package:get/get.dart';
 
 class Homescreen2 extends StatefulWidget {
   const Homescreen2({super.key});
@@ -13,6 +13,27 @@ class _Homescreen2State extends State<Homescreen2> {
   var controller = HomeController();
   @override
   Widget build(BuildContext context) {
+    debugPrint("build us run");
+    // ever(controller.count, (callback) {
+    //   debugPrint("ever is call");
+    // });
+
+    // once(controller.count, (callback) {
+    //   debugPrint("once is call");
+    // });
+
+    // debounce(controller.count, (callback) {
+    //   debugPrint("debug is call");
+    // }, time: Duration(seconds: 2));
+
+    interval(controller.count, (callback) {
+      debugPrint("interval is call");
+    }, time: Duration(seconds: 2));
+
+    everAll([controller.count], (callback) {
+      debugPrint("everAll is call");
+    });
+
     return Scaffold(
       body: Center(
         child: Column(

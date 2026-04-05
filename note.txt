@@ -13,3 +13,16 @@ Ex: RxInt a = 10.obs;
 - if we can use getx we have 2 screen is ui and logic.
 
 
+- GetX worker : a listener that reacr when rx is change
+    - ever : trov ban hav everytime del Rx variable change function
+    - overAll : trov ban have pel del RxList variable change function
+    - once : 
+    - deboiunce 
+    
+maincontroller 
+    - home 
+        - var mc = maincontroller()
+    - profile 
+        - var mc = maincontroller()
+
+       

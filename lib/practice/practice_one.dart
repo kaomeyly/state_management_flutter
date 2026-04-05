@@ -77,7 +77,12 @@ class _PracticeOneState extends State<PracticeOne> {
             ),
           ],
         ),
-        Text("Size : 200", style: TextStyle(fontSize: 20)),
+        Obx(
+          () => Text(
+            "Size : ${controller.selectedSize.value}",
+            style: TextStyle(fontSize: 20),
+          ),
+        ),
         Row(
           spacing: 10,
           children: [
