@@ -25,4 +25,13 @@ maincontroller
     - profile 
         - var mc = maincontroller()
 
+Dependency Injection:
+  - class controller
+    - class 1:
+        - var cont = Get.put(controller())
+    - class 2: 
+        - var cont = Get.find<controller>()
+
        
+put -> Init
+lazy put -> find -> init // call is work

@@ -1,24 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_level_2/screens/dependacy_injection/screen1.dart';
-import 'package:flutter_level_2/screens/dependacy_injection/screen_controller.dart';
+import 'package:flutter_level_2/screens/6-apir/screen_di_1.dart';
+import 'package:flutter_level_2/screens/6-apir/screen_di_controller.dart';
+import 'package:get/get.dart';
 
 void main() {
+  // Get.put(ScreenDiController());
+  Get.lazyPut(() => ScreenDiController());
+
   runApp(const MainApp());
 }
 
-var screenController = ScreenController();
+// var screendiController = ScreenDiController();
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      initialRoute: '/screen1',
-      routes: {
-        '/screen1': (context) => Screen1(controller: screenController),
-        // '/screen2': (context) => Screen2(controller: screenController),
-      },
+    return GetMaterialApp(
+      home: ScreenDi1(),
+      // initialRoute: '/screen1',
+      // routes: {
+      //   '/screen1': (context) => ScreenDi1(controller: screendiController),
+      //   '/screen2': (context) => ScreenDi2(controller: screendiController),
+      // },
       debugShowCheckedModeBanner: false,
     );
   }
