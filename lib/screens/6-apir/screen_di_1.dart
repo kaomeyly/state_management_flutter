@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_level_2/screens/6-apir/screen_di_2.dart';
 import 'package:flutter_level_2/screens/6-apir/screen_di_controller.dart';
 import 'package:get/get.dart';
 
@@ -24,15 +23,15 @@ class ScreenDi1 extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                Get.to(ScreenDi2());
+                Get.toNamed("/screen2", arguments: ["Hello","jelly"],);
               },
               child: Text("Go To next Screen"),
             ),
             ElevatedButton(
               onPressed: () {
                 Get.bottomSheet(
-                  isDismissible: false,
-                  enableDrag: false, //use for close btn
+                  isDismissible: true,
+                  enableDrag: true, //use for close btn
                   Container(
                     height: Get.height / 2,
                     width: Get.width,
@@ -41,6 +40,30 @@ class ScreenDi1 extends StatelessWidget {
                 );
               },
               child: Text("Open Btn sheet"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.dialog(
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Container(height: 80, color: Colors.pinkAccent),
+                    ),
+                  ),
+                );
+              },
+              child: Text("Open Dialog"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.snackbar(
+                  "title",
+                  "message",
+                  backgroundColor: Colors.deepOrange.shade300,
+                  duration: Duration(seconds: 6),
+                );
+              },
+              child: Text("Open Snackbar"),
             ),
           ],
         ),

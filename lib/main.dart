@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_level_2/screens/6-apir/screen_di_1.dart';
+import 'package:flutter_level_2/screens/6-apir/screen_di_2.dart';
 import 'package:flutter_level_2/screens/6-apir/screen_di_controller.dart';
 import 'package:get/get.dart';
 
@@ -19,6 +20,15 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       home: ScreenDi1(),
+      getPages: [
+        GetPage(name: "/screen1", page: () => ScreenDi1()),
+        GetPage(
+          name: "/screen2",
+          page: () => ScreenDi2(),
+          transition: Transition.zoom,
+          transitionDuration: Duration(milliseconds: 800),
+        ),
+      ],
       // initialRoute: '/screen1',
       // routes: {
       //   '/screen1': (context) => ScreenDi1(controller: screendiController),

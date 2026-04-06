@@ -16,8 +16,9 @@ Ex: RxInt a = 10.obs;
 - GetX worker : a listener that reacr when rx is change
     - ever : trov ban hav everytime del Rx variable change function
     - overAll : trov ban have pel del RxList variable change function
-    - once : 
-    - deboiunce 
+    - once : is only work only one
+    - deboiunce or bounce : when list is work when we set min so boiunce work.
+    - interval : is loop when user select
     
 maincontroller 
     - home 
@@ -35,3 +36,5 @@ Dependency Injection:
        
 put -> Init
 lazy put -> find -> init // call is work
+
+- 
