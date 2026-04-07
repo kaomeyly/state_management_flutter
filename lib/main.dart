@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_level_2/screens/6-apir/screen_di_1.dart';
-import 'package:flutter_level_2/screens/6-apir/screen_di_2.dart';
+import 'package:flutter_level_2/ecomm_practice/detail/ecom_detail.dart';
+import 'package:flutter_level_2/ecomm_practice/home/ecom_homescreen.dart';
 import 'package:flutter_level_2/screens/6-apir/screen_di_controller.dart';
 import 'package:get/get.dart';
 
@@ -19,22 +19,23 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: ScreenDi1(),
+      initialRoute: "/home",
       getPages: [
-        GetPage(name: "/screen1", page: () => ScreenDi1()),
+        GetPage(name: "/home", page: () => EcomHomescreen()),
         GetPage(
-          name: "/screen2",
-          page: () => ScreenDi2(),
-          transition: Transition.zoom,
-          transitionDuration: Duration(milliseconds: 800),
+          name: "/detail",
+          page: () => EcomDetail(),
+          transition: Transition.cupertino,
+          transitionDuration: Duration(milliseconds: 600),
         ),
       ],
-      // initialRoute: '/screen1',
-      // routes: {
-      //   '/screen1': (context) => ScreenDi1(controller: screendiController),
-      //   '/screen2': (context) => ScreenDi2(controller: screendiController),
-      // },
       debugShowCheckedModeBanner: false,
     );
   }
 }
+
+// initialRoute: '/screen1',
+// routes: {
+//   '/screen1': (context) => ScreenDi1(controller: screendiController),
+//   '/screen2': (context) => ScreenDi2(controller: screendiController),
+// },

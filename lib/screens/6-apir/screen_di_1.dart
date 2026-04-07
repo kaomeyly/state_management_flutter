@@ -22,8 +22,12 @@ class ScreenDi1 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              onPressed: () {
-                Get.toNamed("/screen2", arguments: ["Hello","jelly"],);
+              onPressed: () async {
+                var result = await Get.toNamed(
+                  "/screen2",
+                  arguments: ["Hello", "jelly"],
+                );
+                debugPrint("result : $result");
               },
               child: Text("Go To next Screen"),
             ),

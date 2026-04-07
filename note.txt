@@ -37,4 +37,18 @@ Dependency Injection:
 put -> Init
 lazy put -> find -> init // call is work
 
-- 
+- Navigation : 
+    - Get.to(screen2()); //use for go to page 2
+    - Get.off(screen2()); //use for off screen back
+    - Get.offAll(screen2()); //use for close on screen when go to another page
+
+Route : 
+    - Get.toNamed("/screen2); //use for go to page 2
+    - Get.offNamed("/screen2); //use for off screen back
+    - Get.offAllNamed("/screen2); //use for close on screen when go to another page
+
+Send data : 
+    - Get.toNamed("/screen2", argument : object);
+    - Get.argument ["key"]
+    - var arg = Get.argument'
+
