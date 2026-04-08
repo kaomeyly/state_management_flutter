@@ -2,15 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_level_2/ecomm_practice/detail/ecom_detail_controller.dart';
 import 'package:get/get.dart';
 
-class EcomDetail extends StatefulWidget {
+class EcomDetail extends GetView<EcomDetailController> {
   const EcomDetail({super.key});
 
-  @override
-  State<EcomDetail> createState() => _EcomDetailState();
-}
+  // var contoller = EcomDetailController();
 
-class _EcomDetailState extends State<EcomDetail> {
-  var contoller = EcomDetailController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +15,7 @@ class _EcomDetailState extends State<EcomDetail> {
         actions: [
           Obx(
             () => Badge.count(
-              count: contoller.count.value,
+              count: controller.count.value,
               child: Icon(Icons.shopping_cart),
             ),
           ),
@@ -49,7 +45,7 @@ class _EcomDetailState extends State<EcomDetail> {
                 Center(
                   child: ElevatedButton(
                     onPressed: () {
-                      contoller.count.value++;
+                      controller.count.value++;
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.deepPurple.shade300,

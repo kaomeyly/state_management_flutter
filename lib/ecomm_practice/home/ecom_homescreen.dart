@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_level_2/data/product_data.dart';
 import 'package:get/get.dart';
 
-class EcomHomescreen extends StatelessWidget {
+class EcomHomescreen extends GetView<EcomHomescreen> {
   const EcomHomescreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Homescreeen")),
+      appBar: AppBar(title: Text("Homescreen")),
 
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),

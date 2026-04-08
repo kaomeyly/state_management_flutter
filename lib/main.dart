@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_level_2/8_apr/counter_app_view.dart';
 import 'package:flutter_level_2/ecomm_practice/detail/ecom_detail.dart';
+import 'package:flutter_level_2/ecomm_practice/detail/ecom_detail_binding.dart';
+import 'package:flutter_level_2/ecomm_practice/home/ecom_binding.dart';
 import 'package:flutter_level_2/ecomm_practice/home/ecom_homescreen.dart';
 import 'package:flutter_level_2/screens/6-apir/screen_di_controller.dart';
 import 'package:get/get.dart';
@@ -19,14 +22,20 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: "/home",
+      // initialRoute: "/home",
+      home: CounterAppView(),
       getPages: [
-        GetPage(name: "/home", page: () => EcomHomescreen()),
+        GetPage(
+          name: "/home",
+          page: () => EcomHomescreen(),
+          binding: EcomBinding(),
+        ),
         GetPage(
           name: "/detail",
           page: () => EcomDetail(),
           transition: Transition.cupertino,
           transitionDuration: Duration(milliseconds: 600),
+          binding: EcomDetailBinding(),
         ),
       ],
       debugShowCheckedModeBanner: false,

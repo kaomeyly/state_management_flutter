@@ -45,10 +45,36 @@ lazy put -> find -> init // call is work
 Route : 
     - Get.toNamed("/screen2); //use for go to page 2
     - Get.offNamed("/screen2); //use for off screen back
-    - Get.offAllNamed("/screen2); //use for close on screen when go to another page
+    - Get.offAllNamed("/screen2); //use for close on screen when go to onther page
 
 Send data : 
     - Get.toNamed("/screen2", argument : object);
     - Get.argument ["key"]
     - var arg = Get.argument'
 
+pass data :
+    + use argument for take data anywhere
+    + Get.argument use for use in onther screen 
+    + Get.toNamed("screen", argument)
+
+recieve data :
+    + Get.back(result : )//like argument
+    + await, async //use for jab data
+    + then use for tthuol data
+
+ui and logic 
+    before bindung: 
+        stateful:
+            var cont = SomeController()
+
+binding sim to controller
+    - after binding
+        + create class someBinding implement Bindings{
+            void dependacies(){
+                Get.lazyPut(()=>SomeController()); //lazyput use for call data to you but not call go if you want to work call lazyput
+            }
+        }
+        + classSomeScreen extends GetView<SomeController>{
+            
+        }
+    
